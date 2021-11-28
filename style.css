@@ -1,0 +1,262 @@
+/****************************** 
+    Author: Aleksandra Mazan
+    Date of begin: 13.11.2021
+    Date of end: 21.11.2021
+******************************/
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --primary-dark: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #1D4CB9;;
+    --primary-main: #1D4CB9;
+    --primary-light: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)),
+    linear-gradient(0deg, #1D4CB9, #1D4CB9);
+
+    --secondary-dark: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    linear-gradient(0deg, #D41111, #D41111);
+    --secondary-main: #D41111;
+    --secondary-light: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)),
+    linear-gradient(0deg, #D41111, #D41111);
+
+    --black: #151416;
+    --grey: #6A706E;
+    --white: #EAEBEB;
+    
+    --text-primary: #000000DE;
+    --text-secondary: #00000099;
+    --text-disabled: #00000061;
+
+    /* White Text */
+    --tw-primary: #FFFFFF;
+    --tw-secondary: #FFFFFFDE;
+    --tw-disabled: #FFFFFF99;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    height: 100%;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 16px;
+}
+
+section{
+    padding: 4rem 16rem 4rem 24rem;
+    display: flex;
+    flex-direction: column;
+}
+
+section:first-of-type{
+    padding-top: 8rem;
+}
+
+section:last-of-type{
+    padding-bottom: 8rem;
+}
+
+section > *:not(:last-child, p, h2, h3, h4, h5, h6){
+    margin-bottom: 4rem;
+}
+
+h2, h3, h4, h5, h6{
+    margin-bottom: 1rem;
+}
+
+.btn{
+    border-radius: .5rem 0;
+    padding: 1rem 2rem;
+    color: var(--tw-primary);
+    border: 0;
+}
+
+.btn-center{
+    text-align: center;
+}
+
+.btn-red{
+    background: var(--secondary-main);
+}
+
+.btn-blue{
+    background: var(--primary-main);
+}
+
+.btn-red:hover{
+    background: var(--secondary-dark);
+}
+
+.btn-blue:hover{
+    background: var(--primary-dark);
+}
+
+.d-flex{
+    display: flex;
+}
+
+button{
+    cursor: pointer;
+}
+
+/* Text */
+
+h1{
+    font-family: 'Racing Sans One';
+    font-size: 4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 5.6rem;
+}
+
+section > h1,
+.text-center{
+    text-align: center;
+}
+
+p{
+    margin-bottom: 2rem;
+}
+
+.bold-p{
+    font-weight: 800;
+}
+
+.bold-p-bigger{
+    text-align: center; 
+    font-weight: 800; 
+    font-size: 120%;
+}
+
+ul li{
+    list-style-type: '– ';
+}
+
+/* Slider */
+
+.bg-img{
+    width: 100%;
+    height: auto;
+    background: url('img/base.jpg');
+    background-attachment: fixed;
+    filter: brightness(.8);
+}
+
+/* FOOTER */
+
+footer{
+    background: var(--black);
+    padding: 4rem 8rem;
+    flex-direction: column;
+    color: var(--tw-primary);
+}
+
+footer > .logo{
+    width: auto;
+    height: 4rem;
+    margin-bottom: 4rem;
+}
+
+.copyrights{
+    width: 100%;
+    justify-content: space-between;
+}
+
+.copyrights .text > p{
+    margin-bottom: .5rem;
+}
+
+.copyrights .text > p:first-of-type{
+    font-weight: 600;
+}
+
+.copyrights .text > p:last-of-type{
+    font-weight: 300;
+}
+
+.social{
+    justify-content: center;
+}
+
+.social > img{
+    height: 3rem;
+    width: auto;
+}
+
+.social > img:not(:first-of-type){
+    margin-left: 1rem;
+}
+
+/* LAPTOPS SCREENS */
+
+@media only screen and (max-width: 1024px) {
+    section{
+        padding: 2rem 8rem 2rem 12rem;
+    }
+}
+
+/* PHONES SCREENS */
+
+@media only screen and (max-width: 640px) {
+    
+    /* Text */
+
+    h1{
+        font-size: 3rem;
+        line-height: 4rem;
+    }
+
+    /* NAV */
+    
+    .top-bar{
+        padding: 2rem;
+    }
+
+    nav .nav-items{
+        display: none;
+    }
+
+    /* SECTIONS */
+
+    section{
+        padding: 2rem;
+    }
+
+    /* FOOTER */
+
+    footer{
+        padding: 4rem 2rem;
+    }
+
+    footer .copyrights{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    footer .copyrights .social{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 2rem;
+    }
+}
+
+/* 
+⣿⣿⣿⠟⠛⠛⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡟⢋⣩⣉⢻
+⣿⣿⣿⠀⣿⣶⣕⣈⠹⠿⠿⠿⠿⠟⠛⣛⢋⣰⠣⣿⣿⠀⣿
+⣿⣿⣿⡀⣿⣿⣿⣧⢻⣿⣶⣷⣿⣿⣿⣿⣿⣿⠿⠶⡝⠀⣿
+⣿⣿⣿⣷⠘⣿⣿⣿⢏⣿⣿⣋⣀⣈⣻⣿⣿⣷⣤⣤⣿⡐⢿
+⣿⣿⣿⣿⣆⢩⣝⣫⣾⣿⣿⣿⣿⡟⠿⠿⠦⠀⠸⠿⣻⣿⡄⢻
+⣿⣿⣿⣿⣿⡄⢻⣿⣿⣿⣿⣿⣿⣿⣿⣶⣶⣾⣿⣿⣿⣿⠇⣼
+⣿⣿⣿⣿⣿⣿⡄⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡟⣰
+⣿⣿⣿⣿⣿⣿⠇⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⢀⣿
+⣿⣿⣿⣿⣿⠏⢰⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⢸⣿
+⣿⣿⣿⣿⠟⣰⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀⣿
+⣿⣿⣿⠋⣴⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡄⣿
+⣿⣿⠋⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⢸
+⣿⠏⣼⣿⣿⣿⣿⣿⣿⣿⣿
+*/
